@@ -188,7 +188,78 @@ footer {
     clip-path: url(#lengkungan-atas);
 }
 
+.hero {
+    position: relative;
+    min-height: 100vh;
+    background: #08001a;
+    /* warna gelap */
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 60px 50px 180px;
+    /* ruang bawah untuk lengkungan */
+    overflow: hidden;
+    /* potong bagian elips yang keluar */
+}
 
+/* ===== LENGKUNGAN ===== */
+.hero::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -120px;
+    /* geser ke bawah agar hanya bagian atas elips terlihat */
+    transform: translateX(-50%);
+    width: 150%;
+    /* lebih lebar dari layar agar lengkung landai */
+    height: 240px;
+    background: #fff;
+    /* samakan dengan warna section berikutnya */
+    border-radius: 50%;
+    /* membentuk elips */
+}
+
+/* ===== KONTEN ===== */
+.hero-content {
+    position: relative;
+    z-index: 1;
+    /* di atas lengkungan */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.hero-text {
+    flex: 1;
+    max-width: 850px;
+}
+
+.hero-text h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+}
+
+.hero-text p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+.hero-img img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 15px 15px 30px rgba(180, 170, 220, 0.5);
+}
+
+/* ===== SECTION BERIKUTNYA ===== */
+.next-section {
+    background: #fff;
+    min-height: 100vh;
+    padding: 50px;
+}
 
 /* MEDIA QUERY */
 @media (max-width: 768px) {
