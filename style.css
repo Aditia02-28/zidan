@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.welcome {
+    font-family: Montserrat, Regular;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    height: 100vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    background-color: #0A001B;
+    clip-path: url(#lengkungan-bawah);
+}
+
+.halo {
+    max-width: 1200px;
+    display: flex;
+    margin: 50px;
+}
+
+
+
+.saya {
+    margin-right: 50px;
+}
+
+.welcome img {
+    border: 1px solid black;
+    border-radius: 50%;
+    height: 300px;
+    box-shadow: 15px 15px 10px #84808D;
+
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.rihlah {
+    font-family: Montserrat-Regular;
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 26px;
+    color: #0a001b;
+    text-align: center;
+}
+
+
+.artikel {
+    display: flex;
+    justify-content: center;
+    /* margin: 40px; */
+    gap: 20px;
+}
+
+.sekolah {
+    font-family: Montserrat-Regular;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    color: #0a001b;
+    border: 5px solid #E5EDFF;
+    border-radius: 20px;
+}
+
+.paragraf {
+    width: 400px;
+    height: 450px;
+    overflow: scroll;
+}
+
+.sekolah img {
+    width: 390px;
+    border-radius: 25px;
+}
+
+/* .piala {
+    max-width: 1200px;
+    margin: 50px auto;
+} */
+
+.prestasi {
+    text-align: center;
+    font-family: Montserrat-Regular;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+.prestasi h3 {
+    margin: 60px;
+}
+
+.fotoku {
+    display: grid;
+    border: 1px solid black;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 250px);
+    gap: 10px;
+}
+
+.fotoku img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+#colums1 {
+    object-fit: cover;
+    object-position: top;
+}
+
+#colums2 {
+    object-fit: cover;
+    object-position: center;
+}
+
+#colums3 {
+    object-fit: cover;
+    object-position: top;
+}
+
+#colums4 {
+    object-fit: cover;
+    object-position: center;
+}
+
+#colums5 {
+    object-fit: cover;
+    object-position: bottom;
+}
+
+#colums6 {
+    object-fit: cover;
+    object-position: bottom;
+}
+
+.fotoku :nth-child(1) {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+}
+
+.fotoku :nth-child(2) {
+    grid-column: 3;
+    grid-row: 1 / span 2;
+}
+
+.fotoku :nth-child(3) {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.fotoku :nth-child(4) {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.fotoku :nth-child(5) {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.fotoku :nth-child(6) {
+    grid-column: 2 / span 3;
+    grid-row: 3;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: Montserrat-Regular;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 26px;
+    height: 200px;
+    padding: 30px;
+    background-color: #0A001B;
+    color: #E5EDFF;
+    clip-path: url(#lengkungan-atas);
+}
+
+
+
+/* MEDIA QUERY */
+@media (max-width: 768px) {
+    .hero {
+        padding: 40px 20px 120px;
+        min-height: auto;
+    }
+
+    .hero-content {
+        flex-direction: column-reverse;
+        /* foto di atas, teks di bawah */
+        text-align: center;
+    }
+
+    .hero-img img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .hero-text h1 {
+        font-size: 1.6rem;
+    }
+
+    .hero-text p {
+        font-size: 0.95rem;
+    }
+
+    /* lengkungan menyesuaikan layar kecil */
+    .hero::after {
+        width: 200%;
+        height: 140px;
+        bottom: -70px;
+    }
+
+
+    .rihlah {
+        font-size: 12px;
+        /* width: 350px; */
+    }
+
+    .artikel {
+        flex-direction: column;
+        margin: 5px;
+    }
+
+    .sekolah {
+        width: 100%;
+    }
+
+    .sekolah img {
+        width: 100%;
+    }
+
+    .paragraf {
+        width: 100%;
+        text-align: justify;
+
+    }
+
+    .piala {
+        /* max-width: 380px; */
+        margin: 0;
+    }
+
+    .prestasi {
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .prestasi h3 {
+        margin: 10px;
+    }
+
+    .fotoku {
+        display: flex;
+        flex-direction: column;
+        gap: 1px;
+        border: none;
+    }
+
+    .fotoku img {
+        width: 100%;
+    }
+
+    footer {
+        /* width: 300px; */
+    }
+}
