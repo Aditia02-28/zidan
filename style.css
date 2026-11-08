@@ -81,10 +81,7 @@ main {
     border-radius: 25px;
 }
 
-/* .piala {
-    max-width: 1200px;
-    margin: 50px auto;
-} */
+
 
 .prestasi {
     text-align: center;
@@ -188,6 +185,10 @@ footer {
     clip-path: url(#lengkungan-atas);
 }
 
+footer i {
+    color: white;
+}
+
 .hero {
     position: relative;
     min-height: 100vh;
@@ -261,7 +262,7 @@ footer {
     padding: 50px;
 }
 
-/* MEDIA QUERY */
+/* --------------------------MEDIA QUERY */
 @media (max-width: 768px) {
     .hero {
         padding: 40px 20px 120px;
